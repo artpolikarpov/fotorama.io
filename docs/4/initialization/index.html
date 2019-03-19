@@ -1,0 +1,46 @@
+---
+title: Initialization
+section: docs
+layout: layouts/docs4
+date: 2016-01-17
+tags: docs4
+---
+
+  <p>Fotorama initialized automatically in all the blocks with the <code>fotorama</code> class.</p>
+  <p>Change this with <code>data-auto=&quot;false&quot;</code>:</p>
+  <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>
+     <span class="attribute">data-auto</span>=<span class="value">"false"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"1.jpg"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"2.jpg"</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+</code></pre><p>...and turn it on manually:</p>
+  <pre><code><span class='javascript'>$(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+  $(<span class="string">'.fotorama'</span>).fotorama();
+});</span>
+</code></pre><h2 id="data">Data</h2>
+  <p>Load data into fotorama directly via Javascript:</p>
+  <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>
+     <span class="attribute">data-auto</span>=<span class="value">"false"</span>></span><span class="tag">&lt;/<span class="title">div</span>></span>
+
+<span class="tag">&lt;<span class="title">script</span>></span><span class="javascript">
+  $(<span class="string">'.fotorama'</span>).fotorama({
+    data: [
+      {img: <span class="string">'1.jpg'</span>, thumb: <span class="string">'1-thumb.jpg'</span>},
+      {img: <span class="string">'2.jpg'</span>, thumb: <span class="string">'2-thumb.jpg'</span>}
+    ]
+  });
+</span><span class="tag">&lt;/<span class="title">script</span>></span></span>
+</code></pre><h2 id="frame-object">Frame object</h2>
+  <p>The complete frame object may look like so:</p>
+  <pre><code class="lang-javascript"><span class='javascript'>{
+  img: <span class="string">'1.jpg'</span>,
+  thumb: <span class="string">'1-thumb.jpg'</span>,
+  full: <span class="string">'1-full.jpg'</span>, <span class="comment">// Separate image for the fullscreen mode.</span>
+  video: <span class="string">'http://youtu.be/C3lWwBslWqg'</span>, <span class="comment">// Youtube, Vimeo or custom iframe URL</span>
+  id: <span class="string">'one'</span>, <span class="comment">// Custom anchor is used with the hash:true option.</span>
+  caption: <span class="string">'The first caption'</span>,
+  html: $(<span class="string">'selector'</span>), <span class="comment">// ...or '&lt;div>123&lt;/div>'. Custom HTML inside the frame.</span>
+  fit: <span class="string">'cover'</span>, <span class="comment">// Override the global fit option.</span>
+  any: <span class="string">'Any data relative to the frame you want to store'</span>
+}</span>
+</code></pre>

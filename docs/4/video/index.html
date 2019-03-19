@@ -1,0 +1,45 @@
+---
+title: Video
+section: docs
+layout: layouts/docs4
+date: 2016-01-04
+tags: docs4
+---
+
+  <p>To&nbsp;add video from YouTube or&nbsp;Vimeo just link to&nbsp;the video page:</p>
+  <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>></span>
+  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://youtube.com/watch?v=C3lWwBslWqg"</span>></span>Desert Rose<span class="tag">&lt;/<span class="title">a</span>></span>
+  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://vimeo.com/61527416"</span>></span>Celestial Dynamics<span class="tag">&lt;/<span class="title">a</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+</code></pre><p><em>Video example (<a href="/examples/video.html" target="_blank">new window</a>):</em></p>
+  <div class="fotorama-wrap"><div class="fotorama" data-width="700" data-ratio="700/426"  data-fit="cover">
+    <a href="http://youtube.com/watch?v=C3lWwBslWqg">Desert Rose</a>
+    <a href="http://vimeo.com/61527416">Celestial Dynamics</a>
+  </div></div>
+
+  <p>Fotorama will automatically fetch the splash images. Link format is&nbsp;not strict&nbsp;&mdash; <code>http://youtu.be/C3lWwBslWqg</code> and <code>http://player.vimeo.com/video/61527416</code> are also good.</p>
+  <p>For a&nbsp;custom splash image:</p>
+  <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>></span>
+  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://youtube.com/watch?v=C3lWwBslWqg"</span>></span>
+    <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"desert-rose.jpg"</span>></span>
+  <span class="tag">&lt;/<span class="title">a</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+</code></pre><p>Add a&nbsp;separate thumbnail using this formula:</p>
+  <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span> <span class="attribute">data-nav</span>=<span class="value">"thumbs"</span>></span>
+  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://youtube.com/watch?v=C3lWwBslWqg"</span> <span class="attribute">data-img</span>=<span class="value">"desert-rose.jpg"</span>></span>
+    <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"desert-rose_thumb.jpg"</span>></span>
+  <span class="tag">&lt;/<span class="title">a</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+</code></pre><h2 id="custom-video">Custom video</h2>
+  <p>You can also add any video if&nbsp;you have iframe link and previews. Here are the Dailymotion videos:</p>
+  <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>></span>
+  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://dailymotion.com/embed/video/xxgmlg?autoplay=1"</span>
+     <span class="attribute">data-video</span>=<span class="value">"true"</span>></span>
+      <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"xxgmlg_preview.jpg"</span>></span>
+  <span class="tag">&lt;/<span class="title">a</span>></span>
+  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://dailymotion.com/embed/video/xu4jqv?autoplay=1"</span>
+     <span class="attribute">data-video</span>=<span class="value">"true"</span>></span>
+      <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"xu4jqv_preview.jpg"</span>></span>
+  <span class="tag">&lt;/<span class="title">a</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+</code></pre><p class="after-pre"><em>Example: <a href="/examples/video-custom.html" target="_blank">Custom video</a></em></p>

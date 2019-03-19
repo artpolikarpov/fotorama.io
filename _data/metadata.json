@@ -1,9 +1,6 @@
 {
-  "title": "Eleventy Netlify Boilerplate",
-  "url": "https://eleventy-netlify-boilerplate.netlify.com",
+  "title": "Fotorama",
   "author": {
-    "name": "Dan Urbanowicz",
-    "email": "dan.urbanowicz@gmail.com",
-    "github": "https://github.com/danurbanowicz"
+    "name": "Art Polikarpov"
   }
 }

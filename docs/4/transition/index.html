@@ -1,0 +1,63 @@
+---
+title: Transition
+section: docs
+layout: layouts/docs4
+date: 2016-01-07
+tags: docs4
+---
+
+    <p>Define which transition to&nbsp;use&nbsp;&mdash; <code>slide</code> or <code>crossfade</code> &mdash; using <code>data-transition</code>:</p>
+    <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>
+     <span class="attribute">data-transition</span>=<span class="value">"crossfade"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"1.jpg"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"2.jpg"</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+</code></pre><p><em>Transition example (<a href="/examples/transition.html" target="_blank">new window</a>):</em></p>
+    <p class="switch-group">
+        <span class="switch js-transition-switch active" data-fotorama="#transition">Slide</span>
+        &nbsp;
+        <span class="switch js-transition-switch" data-fotorama="#transition">Crossfade</span>
+    </p>
+
+    <div class="fotorama-wrap"><div class="fotorama"
+                                    id="transition"
+                                    data-width="700"
+                                    data-ratio="3/2"
+                                    data-fit="cover">
+        <a href="http://s.fotorama.io/okonechnikov/10-lo.jpg"></a>
+        <a href="http://s.fotorama.io/okonechnikov/11-lo.jpg"></a>
+        <a href="http://s.fotorama.io/okonechnikov/13-lo.jpg"></a>
+        <a href="http://s.fotorama.io/okonechnikov/19-lo.jpg"></a>
+        <a href="http://s.fotorama.io/okonechnikov/4-lo.jpg"></a>
+    </div></div>
+
+    <h2 id="dissolve">Dissolve</h2>
+    <p>There is&nbsp;one more transition, <code>dissolve</code>. This variation of&nbsp;fade is&nbsp;perfect for demonstrating images with the identical fragments.</p>
+    <p><em>Dissolve example (<a href="/examples/dissolve.html" target="_blank">new window</a>):</em></p>
+    <p class="switch-group">
+        <span class="switch js-transition-switch active" data-fotorama="#dissolve-example">Dissolve</span>
+        &nbsp;
+        <span class="switch js-transition-switch" data-fotorama="#dissolve-example">Crossfade</span>
+    </p>
+
+    <div class="fotorama-wrap"><div class="fotorama"
+                                    id="dissolve-example"
+                                    data-transition="dissolve"
+                                    data-width="700"
+                                    data-ratio="700/467"
+                                    data-fit="cover"
+                                    data-loop="true">
+        <a href="http://s.fotorama.io/orion-art/5-a.jpg"></a>
+        <a href="http://s.fotorama.io/orion-art/5-b.jpg"></a>
+        <a href="http://s.fotorama.io/orion-art/5-c.jpg"></a>
+    </div></div>
+
+    <h2 id="mix">Mix</h2>
+    <p>Have one transition on swipe and another on click using <code>data-clicktransition</code>:</p>
+    <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>
+     <span class="attribute">data-transition</span>=<span class="value">"slide"</span>
+     <span class="attribute">data-clicktransition</span>=<span class="value">"crossfade"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"1.jpg"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"2.jpg"</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+</code></pre>

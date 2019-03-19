@@ -1,0 +1,67 @@
+---
+title: Fit
+section: docs
+layout: layouts/docs4
+date: 2016-01-06
+tags: docs4
+---
+
+  <p>There are 4&nbsp;ways to&nbsp;fit an&nbsp;image into a&nbsp;fotorama:</p>
+  <ul>
+    <li><code>&#39;contain&#39;</code> <small>Default</small><br>
+      Stretching the image to&nbsp;be&nbsp;fully displayed while fitting within the fotorama.</li>
+    <li><code>&#39;cover&#39;</code><br>
+      Stretching and cropping the image to&nbsp;completely cover the fotorama.</li>
+    <li><code>&#39;scaledown&#39;</code><br>
+      Stretching the image if&nbsp;it&nbsp;is&nbsp;bigger than the fotorama.</li>
+    <li><code>&#39;none&#39;</code><br>
+      Using the image’s own dimensions.</li>
+  </ul>
+  <p>Select fit for the whole fotorama and override it&nbsp;for a&nbsp;single image with <code>data-fit</code>:</p>
+  <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>
+     <span class="attribute">data-fit</span>=<span class="value">"cover"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"1.jpg"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"2.jpg"</span> <span class="attribute">data-fit</span>=<span class="value">"contain"</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+</code></pre><h2 id="examples">Examples</h2>
+  <p>The 200×300 frog:</p>
+  <p class="image"><img src="http://s.fotorama.io/fit/frog.png" width="200" height="300"></p>
+
+  <p>...fit the 240×180 fotorama like so:</p>
+  <div class="fotorama-wrap fit-example">
+    <div class="fotorama" data-width="240" data-ratio="240/180"  data-fit="contain">
+      <a href="http://s.fotorama.io/fit/frog.png" data-caption="contain"></a>
+    </div>
+    <div class="fotorama" data-width="240" data-ratio="240/180"  data-fit="cover">
+      <a href="http://s.fotorama.io/fit/frog.png" data-caption="cover"></a>
+    </div>
+    <div class="fotorama" data-width="240" data-ratio="240/180"  data-fit="scaledown">
+      <a href="http://s.fotorama.io/fit/frog.png" data-caption="scaledown"></a>
+    </div>
+    <div class="fotorama" data-width="240" data-ratio="240/180"  data-fit="none">
+      <a href="http://s.fotorama.io/fit/frog.png" data-caption="none"></a>
+    </div>
+  </div>
+
+  <p>The 200×125 elephant:</p>
+  <p class="image"><img src="http://s.fotorama.io/fit/elephant.png" width="200" height="125"></p>
+
+  <p>...fit the 240×180 fotorama like so:</p>
+  <div class="fotorama-wrap fit-example">
+    <div class="fotorama" data-width="240" data-ratio="240/180"  data-fit="contain">
+      <a href="http://s.fotorama.io/fit/elephant.png" data-caption="contain"></a>
+    </div>
+    <div class="fotorama" data-width="240" data-ratio="240/180"  data-fit="cover">
+      <a href="http://s.fotorama.io/fit/elephant.png" data-caption="cover"></a>
+    </div>
+    <div class="fotorama" data-width="240" data-ratio="240/180"  data-fit="scaledown">
+      <a href="http://s.fotorama.io/fit/elephant.png" data-caption="scaledown"></a>
+    </div>
+    <div class="fotorama" data-width="240" data-ratio="240/180"  data-fit="none">
+      <a href="http://s.fotorama.io/fit/elephant.png" data-caption="none"></a>
+    </div>
+  </div>
+
+
+  <h2 id="fit-thumbnails">Fit thumbnails</h2>
+  <p>All of this applies to thumbnails via <code>data-thumbfit</code>.</p>

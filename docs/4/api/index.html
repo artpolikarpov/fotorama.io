@@ -1,0 +1,210 @@
+---
+title: API
+section: docs
+layout: layouts/docs4
+date: 2016-01-20
+tags: docs4
+---
+
+  <pre><code><span class='xml'><span class="tag">&lt;<span class="title">script</span>></span><span class="javascript">
+  $(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+    <span class="comment">// 1. Initialize fotorama manually.</span>
+    <span class="keyword">var</span> $fotoramaDiv = $(<span class="string">'#fotorama'</span>).fotorama();
+
+    <span class="comment">// 2. Get the API object.</span>
+    <span class="keyword">var</span> fotorama = $fotoramaDiv.data(<span class="string">'fotorama'</span>);
+
+    <span class="comment">// 3. Inspect it in console.</span>
+    console.log(fotorama);
+  });
+</span><span class="tag">&lt;/<span class="title">script</span>></span>
+
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"fotorama"</span>
+     <span class="attribute">class</span>=<span class="value">"fotorama"</span>
+     <span class="attribute">data-auto</span>=<span class="value">"false"</span>></span>
+<span class="comment">&lt;!-- ↑ Important attribute. --></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"1.jpg"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"2.jpg"</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+</code></pre><h2 id="variables">Variables</h2>
+  <h3 id="-fotorama-index-small-number-small-"><code>fotorama.index</code> <small>Number</small></h3>
+  <p>Zero-based position of the fotorama within the all fotoramas on the page.</p>
+  <h3 id="-fotorama-size-small-number-small-"><code>fotorama.size</code> <small>Number</small></h3>
+  <p>Number of frames in the fotorama.</p>
+  <h3 id="-fotorama-data-small-array-small-"><code>fotorama.data</code> <small>Array</small></h3>
+  <h3 id="-fotorama-options-small-object-small-"><code>fotorama.options</code> <small>Object</small></h3>
+  <h3 id="-fotorama-activeindex-small-number-small-"><code>fotorama.activeIndex</code> <small>Number</small></h3>
+  <p>Zero-based position of the active frame.</p>
+  <h3 id="-fotorama-activeframe-small-object-small-"><code>fotorama.activeFrame</code> <small>Object</small></h3>
+  <p>Frame data object with following key properties:</p>
+  <ul>
+    <li><code>img</code> <small>String</small><br/>
+      Image <abbr>URL</abbr>.</li>
+    <li><code>thumb</code> <small>String</small><br/>
+      Thumbnail <abbr>URL</abbr>.</li>
+    <li><code>full</code> <small>String</small><br/>
+      Fullscreen image <abbr>URL</abbr>.</li>
+    <li><code>id</code> <small>String</small><br/>
+      Given id.</li>
+    <li><code>$stageFrame</code> <small>jQuery</small><br/>
+      <abbr>DOM</abbr> element of the active stage frame. Wrapped in a jQuery.</li>
+    <li><code>$navDotFrame</code> <small>jQuery</small><br/>
+      <abbr>DOM</abbr> element of the active navigation frame with iPhone-style dot. Wrapped in a jQuery.</li>
+    <li><code>$navThumbFrame</code> <small>jQuery</small><br/>
+      <abbr>DOM</abbr> element of the active navigation frame with thumbnail. Wrapped in a jQuery.</li>
+  </ul>
+  <h2 id="methods">Methods</h2>
+  <h3 id="-fotorama-show-index-"><code>fotorama.show(index)</code></h3>
+  <p>Shows the frame with the set <code>index</code>, zero-based number:</p>
+  <pre><code class="lang-javascript"><span class='javascript'><span class="comment">// Go to the first frame:</span>
+fotorama.show(<span class="number">0</span>);
+
+<span class="comment">// Fourth:</span>
+fotorama.show(<span class="number">3</span>);</span>
+</code></pre>
+  <p>...or keystring:</p>
+  <pre><code class="lang-javascript"><span class='javascript'><span class="comment">// Next:</span>
+fotorama.show(<span class="string">'>'</span>);
+
+<span class="comment">// Previous:</span>
+fotorama.show(<span class="string">'&lt;'</span>);
+
+<span class="comment">// Last:</span>
+fotorama.show(<span class="string">'>>'</span>);
+
+<span class="comment">// Arbitrary id:</span>
+fotorama.show(<span class="string">'some-id'</span>);</span>
+</code></pre>
+  <h3 id="-fotorama-show-options-"><code>fotorama.show(options)</code></h3>
+  <p>Shows the frame with the set <code>index</code> and in the given <code>time</code>:</p>
+  <pre><code class="lang-javascript"><span class='javascript'>fotorama.show({
+  index: <span class="number">1</span>, <span class="comment">// The second frame.</span>
+  time: <span class="number">500</span> <span class="comment">// Half-second transition.</span>
+});</span>
+</code></pre>
+  <h3 id="-fotorama-startautoplay-interval-"><code>fotorama.startAutoplay([interval])</code></h3>
+  <p>Starts the slideshow with a set <code>interval</code> in milliseconds. Default iterval is <code>5000</code>, 5 seconds.</p>
+  <h3 id="-fotorama-stopautoplay-"><code>fotorama.stopAutoplay()</code></h3>
+  <p>Stops the slideshow.</p>
+  <h3 id="-fotorama-requestfullscreen-"><code>fotorama.requestFullScreen()</code></h3>
+  <p>Opens fotorama in fullscreen mode, if <a href="/customize/options/#allowfullscreen">allowed in options</a>.</p>
+  <h3 id="-fotorama-cancelfullscreen-"><code>fotorama.cancelFullScreen()</code></h3>
+  <p>Leaves the fullscreen mode.</p>
+  <h3 id="-fotorama-playvideo-"><code>fotorama.playVideo()</code></h3>
+  <p>Starts the video if the active frame has it.</p>
+  <h3 id="-fotorama-stopvideo-"><code>fotorama.stopVideo()</code></h3>
+  <p>Stops and unloads the currently playing video.</p>
+  <h3 id="-fotorama-resize-options-"><code>fotorama.resize(options)</code></h3>
+  <p>Changes the size of the fotorama, <code>options</code> is an object with <code>width</code>, <code>minwidth</code>, <code>maxwidth</code>, <code>height</code>, <code>minheight</code>, <code>maxheight</code>, and <code>ratio</code> that you can pass to force a certain size:</p>
+  <pre><code class="lang-javascript"><span class='javascript'>fotorama.resize({
+  width: <span class="number">500</span>,
+  height: <span class="number">333</span>
+});</span>
+</code></pre>
+  <p>Animate the changes by passing the duration in milliseconds as second argument:</p>
+  <pre><code class="lang-javascript"><span class='javascript'>fotorama.resize({
+  width: <span class="number">333</span>,
+  height: <span class="number">500</span>
+}, <span class="number">1000</span>);</span>
+</code></pre>
+  <h3 id="-fotorama-setoptions-options-"><code>fotorama.setOptions(options)</code></h3>
+  <p>Manipulates the <a href="/customize/options/">fotorama options</a> at runtime:</p>
+  <pre><code class="lang-javascript"><span class='javascript'>fotorama.setOptions({
+  nav: <span class="literal">false</span>,
+  arrows: <span class="literal">false</span>
+});</span>
+</code></pre>
+  <h3 id="-fotorama-load-data-"><code>fotorama.load(data)</code></h3>
+  <p>Loads new <code>data</code> into the fotorama. It should be structured as an array and follow the same patterns as the <a href="/customize/initialization/#data">original data</a>:</p>
+  <pre><code class="lang-javascript"><span class='javascript'>fotorama.load([
+  {img: <span class="string">'1.jpg'</span>, thumb: <span class="string">'1-thumb.jpg'</span>},
+  {img: <span class="string">'2.jpg'</span>, thumb: <span class="string">'2-thumb.jpg'</span>}
+]);</span>
+</code></pre>
+  <h3 id="-fotorama-push-frame1-framen-"><code>fotorama.push(frame1, ..., frameN)</code></h3>
+  <p>Appends the given frames to the fotorama:</p>
+  <pre><code class="lang-javascript"><span class='javascript'>fotorama.push({img: <span class="string">'3.jpg'</span>, thumb: <span class="string">'3-thumb.jpg'</span>});</span>
+</code></pre>
+  <h3 id="-fotorama-pop-"><code>fotorama.pop()</code></h3>
+  <p>Removes the last frame.</p>
+  <h3 id="-fotorama-shift-"><code>fotorama.shift()</code></h3>
+  <p>Removes the first frame.</p>
+  <h3 id="-fotorama-unshift-frame1-framen-"><code>fotorama.unshift(frame1, ..., frameN)</code></h3>
+  <p>Adds one or more frames to the beginning of the fotorama.</p>
+  <h3 id="-fotorama-splice-index-howmany-frame1-framen-"><code>fotorama.splice(index , howMany[, frame1, ..., frameN])</code></h3>
+  <p>Changes the data array, adding new frames while removing old frames. It works just like the <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/splice">Array.splice</a>:</p>
+  <pre><code class="lang-javascript"><span class='javascript'><span class="comment">// Remove two frames after the first:</span>
+fotorama.splice(<span class="number">0</span>, <span class="number">2</span>);
+
+<span class="comment">// Replace the last frame:</span>
+fotorama.splice(-<span class="number">1</span>, <span class="number">1</span>, {img: <span class="string">'new-last.jpg'</span>});</span>
+</code></pre>
+  <h3 id="-fotorama-reverse-"><code>fotorama.reverse()</code></h3>
+  <p>Reverses the fotorama in place.</p>
+  <h3 id="-fotorama-sort-comparefunction-"><code>fotorama.sort([compareFunction])</code></h3>
+  <p>Sorts the frames like the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">Array.sort</a>:</p>
+  <pre><code class="lang-javascript"><span class='javascript'>items.sort(<span class="function"><span class="keyword">function</span> <span class="params">(frameA, frameB)</span> {</span>
+  <span class="keyword">if</span> (frameA.img > frameA.img) <span class="keyword">return</span> <span class="number">1</span>;
+  <span class="keyword">if</span> (frameB.img &lt; frameB.img) <span class="keyword">return</span> -<span class="number">1</span>;
+  <span class="keyword">return</span> <span class="number">0</span>;
+});</span>
+</code></pre>
+  <h3 id="-fotorama-shuffle-"><code>fotorama.shuffle()</code></h3>
+  <p>Shuffles the frames.</p>
+  <h3 id="-fotorama-destroy-"><code>fotorama.destroy()</code></h3>
+  <p>Kills the fotorama and restores the original content.</p>
+  <h2 id="events">Events</h2>
+  <p>Attach callbacks to the Fotorama events. Every callback contains the event object and refference to the API as a function arguments:</p>
+  <pre><code class="lang-javascript"><span class='javascript'>$(<span class="string">'.fotorama'</span>).on(<span class="string">'fotorama:ready'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(e, fotorama)</span> {</span>
+  console.log(e.type, fotorama.activeIndex);
+});</span>
+</code></pre>
+  <p>Some of the handlers contain third <code>extra</code> argument with additional data:</p>
+  <pre><code class="lang-javascript"><span class='javascript'>$(<span class="string">'.fotorama'</span>).on(
+  <span class="string">'fotorama:show fotorama:showend'</span>,
+  <span class="function"><span class="keyword">function</span> <span class="params">(e, fotorama, extra)</span> {</span>
+    console.log(e.type + (extra.user ? <span class="string">' after user’s touch'</span> : <span class="string">''</span>));
+    console.log(<span class="string">'transition duration: '</span> + extra.time);
+  }
+);</span>
+</code></pre>
+  <p></p>
+
+  <pre><code class="lang-javascript"><span class='javascript'>$(<span class="string">'.fotorama'</span>).on(<span class="string">'fotorama:load'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(e, fotorama, extra)</span> {</span>
+  console.log(extra.src + <span class="string">' is loaded'</span>);
+});</span>
+</code></pre>
+  <p>It is recommended to start listening to the events before initialization. Here is the snippet to explore all the Fotorama events in console:</p>
+  <pre><code><span class='xml'><span class="tag">&lt;<span class="title">script</span>></span><span class="javascript">
+  $(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+    $(<span class="string">'.fotorama'</span>)
+        <span class="comment">// Listen to the events</span>
+        .on(<span class="string">'fotorama:ready '</span> +           <span class="comment">// Fotorama is fully ready</span>
+            <span class="string">'fotorama:show '</span> +            <span class="comment">// Start of transition to the new frame</span>
+            <span class="string">'fotorama:showend '</span> +         <span class="comment">// End of the show transition</span>
+            <span class="string">'fotorama:load '</span> +            <span class="comment">// Stage image of some frame is loaded</span>
+            <span class="string">'fotorama:error '</span> +           <span class="comment">// Stage image of some frame is broken</span>
+            <span class="string">'fotorama:startautoplay '</span> +   <span class="comment">// Slideshow is started</span>
+            <span class="string">'fotorama:stopautoplay '</span> +    <span class="comment">// Slideshow is stopped</span>
+            <span class="string">'fotorama:fullscreenenter '</span> + <span class="comment">// Fotorama is fullscreened</span>
+            <span class="string">'fotorama:fullscreenexit '</span> +  <span class="comment">// Fotorama is unfullscreened</span>
+            <span class="string">'fotorama:loadvideo '</span> +       <span class="comment">// Video iframe is loaded</span>
+            <span class="string">'fotorama:unloadvideo'</span>,       <span class="comment">// Video iframe is removed</span>
+            <span class="function"><span class="keyword">function</span> <span class="params">(e, fotorama, extra)</span> {</span>
+              console.log(<span class="string">'## '</span> + e.type);
+              console.log(<span class="string">'active frame'</span>, fotorama.activeFrame);
+              console.log(<span class="string">'additional data'</span>, extra);
+            }
+        )
+        <span class="comment">// Initialize fotorama manually</span>
+        .fotorama();
+  });
+</span><span class="tag">&lt;/<span class="title">script</span>></span>
+
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>
+     <span class="attribute">data-auto</span>=<span class="value">"false"</span>></span>
+<span class="comment">&lt;!-- ↑ Important attribute. --></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"1.jpg"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"2.jpg"</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+</code></pre>

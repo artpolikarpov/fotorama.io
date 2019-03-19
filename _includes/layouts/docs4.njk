@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+section: page
+---
+
+<header>
+    <nav>
+      <ul>
+      {%- for nav in collections.docs4 -%}
+        <li>
+          <a href="{{ nav.url | url }}" {% if nav.url == page.url %}data-current="current item"{% endif %}>{{ nav.data.h1 or nav.data.title }}</a>
+        </li>
+      {%- endfor -%}
+      </ul>
+    </nav>
+
+    <h1>{{ h1 or title }}</h1>
+</header>
+
+{{ layoutContent | safe }}

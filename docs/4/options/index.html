@@ -1,0 +1,195 @@
+---
+title: Full list of options
+section: docs
+layout: layouts/docs4
+date: 2016-01-19
+tags: docs4
+---
+
+  <p>Options can be passed via data attributes:</p>
+  <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>
+     <span class="attribute">data-width</span>=<span class="value">"700"</span>
+     <span class="attribute">data-maxwidth</span>=<span class="value">"100%"</span>
+     <span class="attribute">data-ratio</span>=<span class="value">"16/9"</span>
+     <span class="attribute">data-allowfullscreen</span>=<span class="value">"true"</span>
+     <span class="attribute">data-nav</span>=<span class="value">"thumbs"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"1.jpg"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"2.jpg"</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+</code></pre><p>...or JavaScript:</p>
+  <pre><code class="lang-javascript"><span class='javascript'>$(<span class="string">'.fotorama'</span>).fotorama({
+  width: <span class="number">700</span>,
+  maxwidth: <span class="string">'100%'</span>,
+  ratio: <span class="number">16</span>/<span class="number">9</span>,
+  allowfullscreen: <span class="literal">true</span>,
+  nav: <span class="string">'thumbs'</span>
+});</span>
+</code></pre>
+  <p><center>...</center></p>
+  <h3 id="-width-small-number-or-string-small-"><code>width</code> <small>Number or String</small></h3>
+  <p>Stage container width in pixels or percents.</p>
+  <h3 id="-minwidth-small-number-or-string-small-"><code>minwidth</code> <small>Number or String</small></h3>
+  <p>Stage container minimum width in pixels or percents.</p>
+  <h3 id="-maxwidth-small-number-or-string-small-"><code>maxwidth</code> <small>Number or String</small></h3>
+  <p>Stage container maximum width in pixels or percents.</p>
+  <h3 id="-height-small-number-or-string-small-"><code>height</code> <small>Number or String</small></h3>
+  <p>Stage container height in pixels or percents.</p>
+  <h3 id="-minheight-small-number-or-string-small-"><code>minheight</code> <small>Number or String</small></h3>
+  <p>Stage container minimum height in pixels or percents.</p>
+  <h3 id="-maxheight-small-number-or-string-small-"><code>maxheight</code> <small>Number or String</small></h3>
+  <p>Stage container maximum height in pixels or percents.</p>
+  <h3 id="-ratio-small-number-or-string-small-"><code>ratio</code> <small>Number or String</small></h3>
+  <p>Width divided by height. Recommended if you’re using percentage width.</p>
+  <blockquote>
+    <p><em>Article: <a href="/customize/dimensions/">Dimensions</a></em></p>
+  </blockquote>
+  <h3 id="-margin-small-number-small-"><code>margin</code> <small>Number</small></h3>
+  <p>Horizontal margins for frames in pixels.</p>
+  <h3 id="-glimpse-small-number-or-string-small-"><code>glimpse</code> <small>Number or String</small></h3>
+  <p>Glimpse size of nearby frames in pixels or percents.</p>
+  <h3 id="-nav-small-string-or-boolean-small-"><code>nav</code> <small>String or Boolean</small></h3>
+  <p>Navigation style:</p>
+  <ul>
+    <li><code>&#39;dots&#39;</code> <small>Default</small><br>
+      iPhone-style dots.</li>
+    <li><code>&#39;thumbs&#39;</code><br>
+      Thumbnails.</li>
+    <li><code>false</code><br>
+      Nothing.</li>
+  </ul>
+  <blockquote>
+    <p><em>Article: <a href="/customize/thumbnails/">Thumbnails</a></em></p>
+  </blockquote>
+  <h3 id="-navposition-small-number-or-string-small-"><code>navposition</code> <small>Number or String</small></h3>
+  <p>Navigation container position relative to stage: <code>&#39;bottom&#39;</code> or <code>&#39;top&#39;</code>.</p>
+  <blockquote>
+    <p><em>Article: <a href="/customize/navigation-position/">Navigation position</a></em></p>
+  </blockquote>
+  <h3 id="-navwidth-small-string-small-"><code>navwidth</code> <small>String</small></h3>
+  <p>Navigation container width in pixels or percents.</p>
+  <h3 id="-thumbwidth-small-number-small-"><code>thumbwidth</code> <small>Number</small></h3>
+  <p>Tumbnail width in pixels.</p>
+  <h3 id="-thumbheight-small-number-small-"><code>thumbheight</code> <small>Number</small></h3>
+  <p>Tumbnail height in pixels.</p>
+  <h3 id="-thumbmargin-small-number-small-"><code>thumbmargin</code> <small>Number</small></h3>
+  <p>Size of thumbnail margins.</p>
+  <h3 id="-thumbborderwidth-small-number-small-"><code>thumbborderwidth</code> <small>Number</small></h3>
+  <p>Border width of the active thumbnail.</p>
+  <h3 id="-allowfullscreen-small-boolean-or-string-small-"><code>allowfullscreen</code> <small>Boolean or String</small></h3>
+  <p>Allows fullscreen:</p>
+  <ul>
+    <li><code>false</code> <small>Default</small><br></li>
+    <li><code>true</code></li>
+    <li><code>&#39;native&#39;</code></li>
+  </ul>
+  <blockquote>
+    <p><em>Article: <a href="/customize/fullscreen/">Fullscreen</a></em></p>
+  </blockquote>
+  <h3 id="-fit-small-string-small-"><code>fit</code> <small>String</small></h3>
+  <p>How to fit an image into a fotorama:</p>
+  <ul>
+    <li><code>&#39;contain&#39;</code> <small>Default</small></li>
+    <li><code>&#39;cover&#39;</code></li>
+    <li><code>&#39;scaledown&#39;</code></li>
+    <li><code>&#39;none&#39;</code></li>
+  </ul>
+  <blockquote>
+    <p><em>Article: <a href="/customize/fit/">Fit</a></em></p>
+  </blockquote>
+  <h3 id="-thumbfit-small-string-small-"><code>thumbfit</code> <small>String</small></h3>
+  <p>How to fit thumbnail into its frame, <code>cover</code> by default.</p>
+  <h3 id="-transition-small-string-small-"><code>transition</code> <small>String</small></h3>
+  <p>Defines what transition to use:</p>
+  <ul>
+    <li><code>&#39;slide&#39;</code> <small>Default</small></li>
+    <li><code>&#39;crossfade&#39;</code></li>
+    <li><code>&#39;dissolve&#39;</code></li>
+  </ul>
+  <h3 id="-clicktransition-small-string-small-"><code>clicktransition</code> <small>String</small></h3>
+  <p>Defines alternative transition to use on click.</p>
+  <h3 id="-transitionduration-small-number-small-"><code>transitionduration</code> <small>Number</small></h3>
+  <p>Animation length in milliseconds.</p>
+  <blockquote>
+    <p><em>Article: <a href="/customize/transition/">Transition</a></em></p>
+  </blockquote>
+  <h3 id="-captions-small-boolean-small-"><code>captions</code> <small>Boolean</small></h3>
+  <p>Captions visibility.</p>
+  <blockquote>
+    <p><em>Article: <a href="/customize/captions/">Captions</a></em></p>
+  </blockquote>
+  <h3 id="-hash-small-boolean-small-"><code>hash</code> <small>Boolean</small></h3>
+  <blockquote>
+    <p><em>Article: <a href="/customize/hash/">Hash</a></em></p>
+  </blockquote>
+  <h3 id="-startindex-small-number-or-string-small-"><code>startindex</code> <small>Number or String</small></h3>
+  <p>Index or id of the frame that will be shown upon initialization of the fotorama.</p>
+  <h3 id="-loop-small-boolean-small-"><code>loop</code> <small>Boolean</small></h3>
+  <p>Enables loop.</p>
+  <blockquote>
+    <p><em>Article: <a href="/customize/loop/">Loop</a></em></p>
+  </blockquote>
+  <h3 id="-autoplay-small-boolean-or-number-small-"><code>autoplay</code> <small>Boolean or Number</small></h3>
+  <p>Enables slideshow. Turn it on with <code>true</code> or any interval in milliseconds.</p>
+  <h3 id="-stopautoplayontouch-small-boolean-small-"><code>stopautoplayontouch</code> <small>Boolean</small></h3>
+  <p>Stops slideshow at any user action with the fotorama.</p>
+  <blockquote>
+    <p><em>Article: <a href="/customize/autoplay/">Autoplay</a></em></p>
+  </blockquote>
+  <h3 id="-keyboard-small-boolean-or-object-small-"><code>keyboard</code> <small>Boolean or Object</small></h3>
+  <p>Enables keyboard navigation.</p>
+  <blockquote>
+    <p><em>Article: <a href="/customize/keyboard/">Keyboard</a></em></p>
+  </blockquote>
+  <h3 id="-arrows-small-boolean-small-"><code>arrows</code> <small>Boolean</small></h3>
+  <p>Turns on navigation arrows over the frames.</p>
+  <ul>
+    <li><code>true</code> <small>Default</small></li>
+    <li><code>false</code></li>
+    <li><code>&#39;always&#39;</code><br>
+      Do not hide controls on hover or tap.</li>
+  </ul>
+  <h3 id="-click-small-boolean-small-"><code>click</code> <small>Boolean</small></h3>
+  <p>Moving between frames by clicking.</p>
+  <h3 id="-swipe-small-boolean-small-"><code>swipe</code> <small>Boolean</small></h3>
+  <p>Moving between frames by swiping.</p>
+  <h3 id="-trackpad-small-boolean-small-"><code>trackpad</code> <small>Boolean</small></h3>
+  <p>Enables trackpad support and horizontal mouse wheel as well.</p>
+  <blockquote>
+    <p><em>Article: <a href="/customize/arrows-click-swipe/">Arrows, click, swipe</a></em></p>
+  </blockquote>
+  <h3 id="-shuffle-small-boolean-small-"><code>shuffle</code> <small>Boolean</small></h3>
+  <p>Shuffles frames at launch.</p>
+  <blockquote>
+    <p><em>Article: <a href="/customize/shuffle/">Shuffle</a></em></p>
+  </blockquote>
+  <h3 id="-direction-small-string-small-"><code>direction</code> <small>String</small></h3>
+  <p>Sets the frames direction: <code>ltr</code> or <code>rtl</code>.</p>
+  <blockquote>
+    <p><em>Article: <a href="/customize/right-to-left/">Right-to-left</a></em></p>
+  </blockquote>
+  <h3 id="-spinner-small-object-small-"><code>spinner</code> <small>Object</small></h3>
+  <p>Spinner options:</p>
+  <pre><code class="lang-javascript"><span class='javascript'>$(<span class="string">'.fotorama'</span>).fotorama({
+  spinner: {
+    lines: <span class="number">13</span>,
+    color: <span class="string">'rgba(0, 0, 0, .75)'</span>
+  }
+});</span>
+</code></pre>
+  <p class="after-pre"><em><a href="http://fgnass.github.io/spin.js/" class="js-analytics-click" data-action="outbound">Spin.js docs</a></em></p>
+
+  <h3 id="-shadows-small-boolean-small-"><code>shadows</code> <small>Boolean</small></h3>
+  <p>Enables shadows.</p>
+  <h2 id="defaults">Defaults</h2>
+  <p>Override defaults by defining <code>fotoramaDefaults</code> before loading Fotorama:</p>
+  <pre><code><span class='xml'><span class="tag">&lt;<span class="title">script</span>></span><span class="javascript">
+  fotoramaDefaults = {
+    width: <span class="number">700</span>,
+    maxwidth: <span class="string">'100%'</span>,
+    ratio: <span class="number">16</span>/<span class="number">9</span>,
+    allowfullscreen: <span class="literal">true</span>,
+    nav: <span class="string">'thumbs'</span>
+  }
+</span><span class="tag">&lt;/<span class="title">script</span>></span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"</span>></span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>></span></span>
+</code></pre>

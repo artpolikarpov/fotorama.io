@@ -1,23 +1,49 @@
 <!doctype html>
 <html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
 
-	{% include "components/head.njk" %}
+	<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>{{ title or metadata.title }}</title>
+      <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+      {% set css %}
+        {% include "assets/css/inline.css" %}
+      {% endset %}
+      <style>{{ css | cssmin | safe }}</style>
+      {% set js %}
+        {% include "assets/js/inline.js" %}
+      {% endset %}
+      <script>{{ js | jsmin | safe }}</script>
+    </head>
+
 
 	<body>
-
 		<header>
 			<em>
 				<a href="{{ '/' | url }}">{{ metadata.title }}</a>
 			</em>
-			{% include "components/nav.njk" %}
+
+			<nav>
+              <ul>
+              {%- for nav in collections.nav -%}
+                <li>
+                  <a href="{{ nav.url | url }}" {% if nav.url == page.url %}data-current="current item"{% endif %}>{{ nav.data.h1 or nav.data.title }}</a>
+                </li>
+              {%- endfor -%}
+              </ul>
+            </nav>
 		</header>
 
 		<main>
 			{{ layoutContent | safe }}
 		</main>
 
-		{% include "components/footer.njk" %}
-
+		<footer>
+          <small>
+            © 2011—2019, Art Polikarpov<br>
+            Sponsored <a href="https://uploadcare.com/?utm_campaign=fotorama">by Uploadcare</a></p>
+          </small>
+        </footer>
 	</body>
 
 </html>

@@ -1,0 +1,62 @@
+---
+title: Dimensions
+section: docs
+layout: layouts/docs4
+date: 2016-01-01
+tags: docs4
+---
+
+    <p>Fotorama’s dimensions are the dimensions of&nbsp;the first image. Other pictures are scaled proportionally to&nbsp;fit.
+        To&nbsp;reserve the space on&nbsp;the page before the first image is&nbsp;loaded, use <code>data-width</code> and <code>data-height</code>:</p>
+    <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>
+     <span class="attribute">data-width</span>=<span class="value">"800"</span>
+     <span class="attribute">data-height</span>=<span class="value">"600"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"1.jpg"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"2.jpg"</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+</code></pre><h2 id="responsive">Responsive</h2>
+    <p>To&nbsp;make fotorama responsive, define width in&nbsp;percents and aspect ratio:</p>
+    <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>
+     <span class="attribute">data-width</span>=<span class="value">"100%"</span>
+     <span class="attribute">data-ratio</span>=<span class="value">"800/600"</span>></span>
+<span class="comment">&lt;!-- ↑ The same as data-ratio="4/3"
+       or data-ratio="1.3333333333". --></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"1.jpg"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"2.jpg"</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+</code></pre><p><em>Responsive example (<a href="/examples/responsive.html" target="_blank">new window</a>):</em></p>
+    <div class="fotorama-wrap"><div class="fotorama"
+                                    data-width="100%"
+                                    data-ratio="3/2">
+        <a href="http://s.fotorama.io/okonechnikov/7.jpg"></a>
+        <a href="http://s.fotorama.io/okonechnikov/26.jpg"></a>
+        <a href="http://s.fotorama.io/okonechnikov/22-lo.jpg"></a>
+        <a href="http://s.fotorama.io/okonechnikov/8-lo.jpg"></a>
+        <a href="http://s.fotorama.io/okonechnikov/19.jpg"></a>
+    </div></div>
+
+    <p>Constrain fotorama’s size to&nbsp;a&nbsp;certain range with <code>data-minwidth</code>, <code>data-maxwidth</code>, <code>data-minheight</code>, and <code>data-maxheight</code>:</p>
+    <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>
+     <span class="attribute">data-width</span>=<span class="value">"100%"</span>
+     <span class="attribute">data-ratio</span>=<span class="value">"800/600"</span>
+     <span class="attribute">data-minwidth</span>=<span class="value">"400"</span>
+     <span class="attribute">data-maxwidth</span>=<span class="value">"1000"</span>
+     <span class="attribute">data-minheight</span>=<span class="value">"300"</span>
+     <span class="attribute">data-maxheight</span>=<span class="value">"100%"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"1.jpg"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"2.jpg"</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+</code></pre><p class="after-pre"><em>Example: <a href="/examples/constrained.html" target="_blank">Constrained</a></em></p>
+
+    <p>Relative height is&nbsp;calculated based on&nbsp;inner height of&nbsp;the window. A&nbsp;height of&nbsp;100% covers the entire browser window:</p>
+    <pre><code><span class='xml'><span class="tag">&lt;<span class="title">body</span> <span class="attribute">style</span>=<span class="value">"margin: 0;"</span>></span>
+
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>
+       <span class="attribute">data-width</span>=<span class="value">"100%"</span>
+       <span class="attribute">data-height</span>=<span class="value">"100%"</span>></span>
+    <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"1.jpg"</span>></span>
+    <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"2.jpg"</span>></span>
+  <span class="tag">&lt;/<span class="title">div</span>></span>
+
+<span class="tag">&lt;/<span class="title">body</span>></span></span>
+</code></pre><p class="after-pre"><em>Example: <a href="/examples/full-window.html" target="_blank">Full window</a></em></p>

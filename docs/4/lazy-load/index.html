@@ -1,0 +1,24 @@
+---
+title: Lazy load
+section: docs
+layout: layouts/docs4
+date: 2016-01-18
+tags: docs4
+---
+
+  <p>Browsers load images even if&nbsp;they are removed with JavaScript. All images in&nbsp;the example below will be&nbsp;downloaded right away:</p>
+  <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"1.jpg"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"2.jpg"</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+</code></pre><p>If&nbsp;you don&rsquo;t worry about browsers with no&nbsp;JavaScript, turn on&nbsp;lazy loading by&nbsp;altering your <abbr>HTML</abbr>:</p>
+  <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>></span>
+  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"1.jpg"</span>></span><span class="tag">&lt;/<span class="title">a</span>></span>
+  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"2.jpg"</span>></span><span class="tag">&lt;/<span class="title">a</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+</code></pre><p>Add thumbnails:</p>
+  <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>></span>
+  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"1.jpg"</span> <span class="attribute">data-thumb</span>=<span class="value">"1_thumb.jpg"</span>></span><span class="tag">&lt;/<span class="title">a</span>></span>
+  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"2.jpg"</span> <span class="attribute">data-thumb</span>=<span class="value">"2_thumb.jpg"</span>></span><span class="tag">&lt;/<span class="title">a</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+</code></pre><p>All fotoramas here are using this method of image embedding.</p>
