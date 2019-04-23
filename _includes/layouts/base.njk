@@ -1,11 +1,19 @@
 <!doctype html>
-<html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
+<html lang="en">
 
 	<head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>{{ title or metadata.title }}</title>
+
       <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+      <link rel="icon" type="image/png" href="/static/img/favicon.png">
+
       {% set css %}
         {% include "assets/css/inline.css" %}
       {% endset %}
@@ -18,31 +26,34 @@
 
 
 	<body>
-		<header>
-			<em>
-				<a href="{{ '/' | url }}">{{ metadata.title }}</a>
-			</em>
-
-			<nav>
-              <ul>
-              {%- for nav in collections.nav -%}
-                <li>
-                  <a href="{{ nav.url | url }}" {% if nav.url == page.url %}data-current="current item"{% endif %}>{{ nav.data.h1 or nav.data.title }}</a>
-                </li>
-              {%- endfor -%}
-              </ul>
-            </nav>
+		<header class="floor floor--header">
+		    <div class="floor__max-width">
+                <nav>
+                  <ul class="menu">
+                    <li class="menu__item">
+                        <a href="{{ '/' | url }}" class="menu__link {% if '/' == page.url %}is-current{% endif %}">{{ metadata.title }}</a>
+                    </li>
+                  {%- for nav in collections.nav -%}
+                    <li class="menu__item">
+                      <a href="{{ nav.url | url }}" class="menu__link {% if nav.url == page.url %}is-current{% endif %} {% if nav.data.section == section %}is-section{% endif %}">{{ nnav.data.h1 or nav.data.title }}</a>
+                    </li>
+                  {%- endfor -%}
+                  </ul>
+                </nav>
+            </div>
 		</header>
 
-		<main>
-			{{ layoutContent | safe }}
+		<main class="floor floor--main">
+            <div class="floor__max-width">
+                {{ layoutContent | safe }}
+			</div>
 		</main>
 
-		<footer>
-          <small>
-            © 2011—2019, Art Polikarpov<br>
-            Sponsored <a href="https://uploadcare.com/?utm_campaign=fotorama">by Uploadcare</a></p>
-          </small>
+		<footer class="floor floor--footer">
+		    <div class="floor__max-width">
+                <p>© 2011—2019, Art Polikarpov</p>
+                <p>Sponsored <a href="https://uploadcare.com/?utm_campaign=fotorama">by Uploadcare</a></p>
+            </div>
         </footer>
 	</body>
 
