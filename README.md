@@ -2,4 +2,4 @@
 
 # What is it?
 
-Fotorama’s static website using the [Eleventy](https://www.11ty.io/) static site, with auto-deploy to [Netlify](https://www.netlify.com).
+Source of Fotorama’s static website using the [Eleventy](https://www.11ty.io/) static site, with auto-deploy to [Netlify](https://www.netlify.com).
