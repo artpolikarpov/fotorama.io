@@ -1,0 +1,153 @@
+@import url(_normalize.css);
+
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #1e1f24;
+    color: #fff;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    transition: all .2s;
+}
+
+a:hover {
+    border-bottom-color: #fff;
+}
+
+/**/
+.floor {
+    position: relative;
+}
+
+.floor__max-width {
+    max-width: 760px;
+    padding: 0 1em;
+    margin: auto;
+    position: relative;
+}
+
+.floor--header {
+    background-color: rgba(255, 255, 255, .06);
+}
+
+.floor--main {
+    padding: 2em 0 3em;
+    flex-grow: 1;
+}
+
+.floor--footer {
+    padding: 2em 0;
+    flex-shrink: 0;
+    font-size: 14px;
+    opacity: .7;
+    transition: all .2s;
+}
+
+.floor--footer:hover {
+    opacity: 1;
+}
+
+.floor--footer .floor__max-width:before {
+    content: '';
+    position: absolute;
+    top: -2em;
+    width: 50%;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
+}
+
+
+/**/
+.menu {
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__item {
+    display: inline-block;
+}
+
+a.menu__link {
+    border-bottom: none;
+    display: inline-block;
+    padding: 10px 1em 8px;
+    opacity: .7;
+    border-bottom: 1px solid transparent;
+}
+
+a.menu__link.is-current {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+a.menu__link.is-section {
+    border-bottom-color: #fff;
+}
+
+a.menu__link:hover {
+    background-color: rgba(255, 255, 255, .1);
+    border-bottom-color: #fff;
+    opacity: 1;
+}
+
+/**/
+.lead {
+    margin-bottom: 1em;
+}
+
+/**/
+.photos-by {
+    margin-top: .5em;
+    font-size: 14px;
+    text-align: right;
+    opacity: .7;
+    transition: all .2s;
+}
+
+.photos-by:hover {
+    opacity: 1;
+}
+
+/**/
+i.uc {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    background-color: #ffd900;
+    border-radius: 1em;
+}
+
+i.uc:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #000;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -1px;
+}
+
+/*text, content*/
+p,
+ul,
+ol,
+pre {
+    margin-bottom: 1em;
+}

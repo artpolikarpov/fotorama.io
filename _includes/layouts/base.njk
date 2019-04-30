@@ -8,14 +8,14 @@
 
       <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 
       <link rel="icon" type="image/png" href="/static/img/favicon.png">
 
       {% set css %}
-        {% include "assets/css/inline.css" %}
+        {% include "assets/css/style.njk" %}
       {% endset %}
       <style>{{ css | cssmin | safe }}</style>
       {% set js %}
@@ -52,7 +52,7 @@
 		<footer class="floor floor--footer">
 		    <div class="floor__max-width">
                 <p>© 2011—2019, Art Polikarpov</p>
-                <p>Sponsored <a href="https://uploadcare.com/?utm_campaign=fotorama">by Uploadcare</a></p>
+                <p>Sponsored by <a href="https://uploadcare.com/?utm_campaign=fotorama">Uploadcare</a> <i class="uc"></i></p>
             </div>
         </footer>
 	</body>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrows, click, swipe</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<!-- jQuery, -->
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+	<!-- Fotorama -->
+	<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.2/fotorama.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.2/fotorama.js"></script>
+
+  <!-- Just don’t want to repeat this prefix in every img[src] -->
+  <base href="https://s.fotorama.io/">
+</head>
+
+<body>
+
+<script>
+  $(function () {
+    // Change options on the fly
+    $('.js-set-options').on('change', function (e) {
+      var fotorama = $($(this).data('fotorama')).data('fotorama'),
+          options = {};
+
+      if (!fotorama) return;
+
+      $(':input', this).each(function () {
+        var $input = $(this);
+        options[$input.attr('name')] = $input.attr('type') === 'checkbox' ? $input.is(':checked') : $input.val();
+      });
+
+      fotorama.setOptions(options);
+    });
+  });
+</script>
+
+<p>Fotorama with slide transition:</p>
+
+<form style="margin-bottom: .5em;" class="js-set-options" data-fotorama="#slide-controls">
+  <label><input type="checkbox" name="arrows" checked> Arrows</label>
+  &nbsp;
+  <label><input type="checkbox" name="click" checked> Click</label>
+  &nbsp;
+  <label><input type="checkbox" name="swipe" checked> Swipe</label>
+  &nbsp;
+  <label><input type="checkbox" name="trackpad"> Trackpad</label>
+</form>
+
+<!-- Fotorama -->
+<div class="fotorama"
+     id="slide-controls"
+     data-width="700"
+     data-ratio="3/2">
+	<a href="okonechnikov/1-lo.jpg"></a>
+	<a href="okonechnikov/2-lo.jpg"></a>
+	<a href="okonechnikov/9-lo.jpg"></a>
+	<a href="okonechnikov/6-lo.jpg"></a>
+	<a href="okonechnikov/5-lo.jpg"></a>
+</div>
+
+<p>Fotorama with crossfade transition:</p>
+
+<form style="margin-bottom: .5em;" class="js-set-options" data-fotorama="#crossfade-controls">
+  <label><input type="checkbox" name="arrows" checked> Arrows</label>
+  &nbsp;
+  <label><input type="checkbox" name="click" checked> Click</label>
+  &nbsp;
+  <label><input type="checkbox" name="swipe" checked> Swipe</label>
+  &nbsp;
+  <label><input type="checkbox" name="trackpad" checked> Trackpad</label>
+</form>
+
+<!-- Fotorama -->
+<div class="fotorama"
+     id="crossfade-controls"
+     data-width="700"
+     data-ratio="3/2"
+     data-transition="crossfade">
+	<a href="okonechnikov/3-lo.jpg"></a>
+	<a href="okonechnikov/4-lo.jpg"></a>
+	<a href="okonechnikov/7-lo.jpg"></a>
+	<a href="okonechnikov/11-lo.jpg"></a>
+	<a href="okonechnikov/10-lo.jpg"></a>
+</div>
+
+<!-- © -->
+<p>Photos <a href="https://okonet.ru/">by Andrey Okonetchnikov</a></p>
+</body>
+</html>

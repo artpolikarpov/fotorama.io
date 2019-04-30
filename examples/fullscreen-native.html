@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Native fullscreen</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<!-- jQuery, -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<!-- Fotorama -->
+	<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.2/fotorama.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.2/fotorama.js"></script>
+
+	<!-- Just don’t want to repeat this prefix in every img[src] -->
+	<base href="https://s.fotorama.io/okonechnikov/">
+</head>
+
+<body>
+
+<p>Native fullscreen:<p>
+<pre style="margin-top: -1em; margin-left: 1em;"><code>&lt;div class="fotorama"
+     data-allowfullscreen="<mark>native</mark>"></code></pre>
+
+<p>Click icon at the top-right.</p>
+
+<!-- Fotorama -->
+<div class="fotorama"
+     data-width="700"
+     data-ratio="3/2"
+     data-fit="cover"
+     data-allowfullscreen="native">
+	<a href="9-lo.jpg"></a>
+	<a href="23-lo.jpg"></a>
+	<a href="14-lo.jpg"></a>
+	<a href="15-lo.jpg"></a>
+	<a href="16-lo.jpg"></a>
+</div>
+
+<!-- © -->
+<p>Photos <a href="https://okonet.ru/">by Andrey Okonetchnikov</a></p>
+</body>
+</html>
