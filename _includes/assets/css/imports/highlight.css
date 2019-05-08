@@ -1,0 +1,96 @@
+/*
+
+Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
+
+*/
+
+tt, code {
+	font-family: Menlo, Consolas, "Courier New", monospace;
+	/*color: #454b43;*/
+	white-space: nowrap;
+  /*font-weight: bold;*/
+  padding: 1px 3px 2px;
+  border-radius: 3px;
+    color: #000;
+  background-color: #777;
+  font-size: .9em;
+}
+
+pre {
+	margin-top: 0;
+	white-space: pre;
+  position: relative;
+}
+
+pre code {
+	display: block;
+  color: #aaa;
+  background: #383235;
+	white-space: pre;
+  font-weight: normal;
+  overflow: auto;
+  /*-webkit-overflow-scrolling: touch;*/
+  padding: 18px 48px 24px;
+  margin-left: -8px;
+  margin-right: -8px;
+  font-size: .85em;
+  border-radius: 6px;
+}
+
+pre code > span:before {
+  position: absolute;
+  right: 8px;
+  top: 2px;
+  font-family: sans-serif;
+  color: #777;
+}
+
+
+pre code > span.xml:before,
+pre code > span.html:before {
+  content: 'HTML';
+}
+
+pre code > span.javascript:before {
+  content: 'JavaScript';
+}
+
+pre .string,
+pre .tag .value,
+pre .filter .argument,
+pre .addition,
+pre .change,
+pre .apache .tag,
+pre .apache .cbracket,
+pre .nginx .built_in,
+pre .tex .formula {
+  /*color: #62c0e6;*/
+}
+
+pre .comment,
+pre .template_comment,
+pre .shebang,
+pre .doctype,
+pre .pi,
+pre .javadoc,
+pre .deletion,
+.apache .sqbracket {
+  color: #fff;
+}
+
+pre .keyword,
+pre .tag .title,
+pre .ini .title,
+pre .lisp .title,
+pre .clojure .title,
+pre .http .title,
+pre .nginx .title,
+pre .css .tag,
+pre .winutils,
+pre .flow,
+pre .apache .tag,
+pre .tex .command,
+pre .request,
+pre .status {
+  font-weight: bold;
+}

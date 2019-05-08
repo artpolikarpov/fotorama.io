@@ -1,0 +1,34 @@
+.switch-group {
+  font-size: 14px;
+}
+
+.switch {
+  color: #fff;
+	border: 1px dashed rgba(255, 255, 255, .3);
+	border-radius: 6px;
+	padding: 1px 5px 2px;
+	transition: .2s all;
+	cursor: pointer;
+}
+
+.switch:hover {
+	color: #bbb;
+	border: 1px dashed #fff;
+}
+
+.switch.active, .key {
+	color: #000;
+	background-color: #777;
+	border: 1px solid #777;
+	cursor: default;
+}
+
+.key {
+	cursor: pointer;
+	margin: 0;
+	position: relative;
+}
+
+.key:active {
+	top: 1px;
+}

@@ -1,0 +1,14 @@
+.download {
+    display: inline-block;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .3);
+    font-size: 115%;
+    line-height: 3;
+    padding: 0 2em;
+    transition: .2s all;
+    border-radius: 6px;
+}
+
+.download:hover {
+    border-color: #fff;
+}

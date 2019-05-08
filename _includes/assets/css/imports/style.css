@@ -1,6 +1,3 @@
-@import url(_normalize.css);
-
-
 body {
     font-family: sans-serif;
     line-height: 1.6;
@@ -48,7 +45,7 @@ a:hover {
     padding: 2em 0;
     flex-shrink: 0;
     font-size: 14px;
-    opacity: .7;
+    opacity: .8;
     transition: all .2s;
 }
 
@@ -112,7 +109,7 @@ a.menu__link:hover {
     margin-top: .5em;
     font-size: 14px;
     text-align: right;
-    opacity: .7;
+    opacity: .8;
     transition: all .2s;
 }
 
@@ -127,21 +124,8 @@ i.uc {
     vertical-align: middle;
     width: 1em;
     height: 1em;
-    background-color: #ffd900;
-    border-radius: 1em;
-}
-
-i.uc:after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    border-radius: 2px;
-    background-color: #000;
-    top: 50%;
-    margin-top: -1px;
-    left: 50%;
-    margin-left: -1px;
+    background-image: url(https://ucarecdn.com/6e7a7757-397f-4341-a61f-0223c5a5bd97/-/preview/80x80/-/inline/no/uc-logo-mark-80x80.png);
+    background-size: 100%;
 }
 
 /*text, content*/
@@ -150,4 +134,12 @@ ul,
 ol,
 pre {
     margin-bottom: 1em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 1.5em;
+    margin-bottom: .5em;
 }
