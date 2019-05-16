@@ -2,7 +2,7 @@
 title: Fullscreen
 section: docs
 layout: layouts/page
-date: 2016-01-02
+date: 2019-05-16
 tags: docs4
 ---
 
@@ -55,3 +55,21 @@ tags: docs4
   <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"2.jpg"</span> <span class="attribute">data-full</span>=<span class="value">"2_full.jpg"</span>></span>
 <span class="tag">&lt;/<span class="title">div</span>></span></span>
 </code></pre>
+
+<p>
+  When using image CDNs like <a href="/docs/4/cdn/" target="_blank">Uploadcare</a>,
+  you can use a&nbsp;single image source for both larger and smaller versions.
+  To&nbsp;do this, ingest the large image version to Uploadcare and apply the
+  resize Image Transformation to generate its smaller version on the fly. Here’s
+  an&nbsp;example:
+</p>
+
+<p>Large image, source:</p>
+
+<pre><code>https://ucarecdn.com/05f649bf-b70b-4cf8-90f7-2588ce404a08/</code></pre>
+
+<p>Smaller 640px-wide version, generated on the fly:</p>
+
+<pre><code>https://ucarecdn.com/05f649bf-b70b-4cf8-90f7-2588ce404a08/-/resize/640x/</code></pre>
+
+<p>Refer to <a href="https://uploadcare.com/docs/image_transformations/resize_crop/?utm_campaign=fotorama#operation-resize">Uploadcare Docs</a> to learn more.</p>
