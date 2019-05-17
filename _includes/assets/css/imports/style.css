@@ -129,11 +129,13 @@ i.uc {
 }
 
 /*text, content*/
-p,
+p {
+    margin-bottom: 1em;
+}
 ul,
 ol,
 pre {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 h1,
