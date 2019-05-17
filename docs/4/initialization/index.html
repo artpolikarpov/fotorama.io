@@ -5,9 +5,16 @@ layout: layouts/page
 date: 2016-01-17
 tags: docs4
 ---
-
-  <p>Fotorama initialized automatically in all the blocks with the <code>fotorama</code> class.</p>
-  <p>Change this with <code>data-auto=&quot;false&quot;</code>:</p>
+<p>
+  By&nbsp;default, Fotorama is initialized automatically in every
+  <code>&lt;div&gt;</code> element with the specified <code>fotorama</code>
+  class.
+</p>
+<p>
+  You can switch this behavior to&nbsp;manual by setting the
+  <code>data-auto</code> attribute to <code>false</code>.
+</p>
+  
   <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>
      <span class="attribute">data-auto</span>=<span class="value">"false"</span>></span>
   <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"1.jpg"</span>></span>
@@ -29,6 +36,21 @@ tags: docs4
       {img: <span class="string">'2.jpg'</span>, thumb: <span class="string">'2-thumb.jpg'</span>}
     ]
   });
+</span><span class="tag">&lt;/<span class="title">script</span>></span></span>
+  <p>
+    You can also apply the <a href="/docs/4/cdn/">Image&nbsp;CDN</a> approach when
+    dynamically loading images.
+  </p>
+  <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>
+    <span class="attribute">data-auto</span>=<span class="value">"false"</span>></span><span class="tag">&lt;/<span class="title">div</span>></span>
+
+<span class="tag">&lt;<span class="title">script</span>></span><span class="javascript">
+$(<span class="string">'.fotorama'</span>).fotorama({
+ data: [
+   {img: <span class="string">'https://ucarecdn.com/05f649bf-b70b-4cf8-90f7-2588ce404a08/'</span>, thumb: <span class="string">'https://ucarecdn.com/05f649bf-b70b-4cf8-90f7-2588ce404a08/-/resize/96x/'</span>},
+   {img: <span class="string">'https://ucarecdn.com/a9ed82c6-14f1-462e-849e-3b007c2aae87/'</span>, thumb: <span class="string">'https://ucarecdn.com/a9ed82c6-14f1-462e-849e-3b007c2aae87/-/resize/96x/'</span>}
+ ]
+});
 </span><span class="tag">&lt;/<span class="title">script</span>></span></span>
 </code></pre><h2 id="frame-object">Frame object</h2>
   <p>The complete frame object may look like so:</p>
