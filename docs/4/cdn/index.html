@@ -1,0 +1,79 @@
+---
+title: Image CDN
+section: docs
+layout: layouts/page
+description: Optimize your site’s web performance by serving images from a content delivery network specializing in images, an Image CDN. 
+date: 2019-05-16
+tags: docs4
+---
+
+<p>
+  You can greatly accelerate your page-loading times and thus overall web
+  performance by&nbsp;serving your Fotorama images from a&nbsp;content delivery
+  network specializing in&nbsp;images or&nbsp;Image CDN.<br>
+  This approach is&nbsp;well combined with cutting&nbsp;off any storage and
+  getting your image gallery serverless.
+</p>
+
+<p>
+  CDN is a&nbsp;large and geographically distributed network of&nbsp;nodes
+  capable&nbsp;of caching your assets in&nbsp;many locations simultaneously.
+  When users load your site&nbsp;or app, their browser requests page assets,
+  and CDNs pick the best node&nbsp;to deliver content as fast as possible.<br>
+  Image CDN can then be defined&nbsp;as a&nbsp;content delivery network for
+  images. Aside&nbsp;from quickly delivering content, image CDNs are
+  capable&nbsp;of on-the-fly image transformation and optimization to further
+  leverage your web performance.<br>
+  This article is&nbsp;based on using <a href="https://uploadcare.com?utm_campaign=fotorama" target="_blank">Uploadcare</a>
+  image CDN. Folks managed to perform large-scale research on how exactly
+  image optimizations affect web performance, <a href="https://blog.uploadcare.com/image-optimization-and-performance-score-23516ebdd31d">read their article on Medium</a>.
+</p>
+
+<p>
+  In return for an&nbsp;uploaded (or&nbsp;ingested) file, Uploadcare returns
+  a&nbsp;CDN URL you can then use as a&nbsp;source for your Fotorama image.
+  Here’s how it&nbsp;looks like:
+</p>
+  
+  <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>
+     <span class="attribute">data-allowfullscreen</span>=<span class="value">"true"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"https://ucarecdn.com/05f649bf-b70b-4cf8-90f7-2588ce404a08/"</span>></span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"https://ucarecdn.com/a9ed82c6-14f1-462e-849e-3b007c2aae87/"</span>></span>
+<span class="tag">&lt;/<span class="title">div</span>></span></span>
+
+<p>
+  You can learn more about connecting Fotorama with Uploadcare in
+  <a href="https://uploadcare.com/docs/guides/fotorama/?utm_campaign=fotorama" target="_blank">this guide</a>.
+</p>
+
+<p>
+  On top of delivering images from the nodes that best suits your users,
+  Uploadcare provides on-the-fly image optimizations that further accelerate
+  your assets.<br>
+  You apply Uploadcare <a href="https://uploadcare.com/docs/image_transformations/?utm_campaign=fotorama">image optimizations</a>
+  by simply appending them to initial CDN URLs. Some examples:
+</p>
+
+<P>
+  Automatically serve images in the next-gen WebP format if a user&nbsp;browser
+  supports it:
+</P>
+
+<pre><code>https://ucarecdn.com/05f649bf-b70b-4cf8-90f7-2588ce404a08/-/format/auto/</code></pre>
+
+<p>Apply compression presets to save image bandwidth:</p>
+
+<pre><code>https://ucarecdn.com/05f649bf-b70b-4cf8-90f7-2588ce404a08/-/quality/lightest/</code></pre>
+
+<p>You can combine optimizations to maximize the effect:</p>
+
+<pre><code>https://ucarecdn.com/05f649bf-b70b-4cf8-90f7-2588ce404a08/-/quality/lightest/-/format/auto/</code></pre>
+
+<p>A few more things you can do with Uploadcare:</p>
+
+<ul>
+  <li>Apply automatic image enhancement, <a href="https://uploadcare.com/docs/image_transformations/filters/?utm_campaign=fotorama#operation-enhance">Uploadcare Docs</a></li>
+  <li>Apply Instagram-like photo filters, <a href="https://uploadcare.com/docs/image_transformations/filters/?utm_campaign=fotorama#operation-filter">Uploadcare Docs</a></li>
+</ul>
+
+<p>Have fun optimizing and drop me a line in case you have any questions.</p>

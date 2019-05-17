@@ -2,7 +2,7 @@
 title: Fullscreen
 section: docs
 layout: layouts/page
-date: 2016-01-02
+date: 2019-05-16
 tags: docs4
 ---
 
@@ -47,11 +47,29 @@ tags: docs4
     <a href="https://s.fotorama.io/okonechnikov/16-lo.jpg" data-full="https://s.fotorama.io/okonechnikov/16.jpg"></a>
   </div></div>
 
-  <h2 id="big-images">Big images</h2>
-  <p>Add a&nbsp;separate image for fullscreen using <code>data-full</code>:</p>
+  <h2 id="big-images">Large images</h2>
+  <p>You can specify a&nbsp;separate fullscreen image version via the <code>data-full</code> attribute:</p>
   <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>
      <span class="attribute">data-allowfullscreen</span>=<span class="value">"native"</span>></span>
   <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"1.jpg"</span> <span class="attribute">data-full</span>=<span class="value">"1_full.jpg"</span>></span>
   <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"2.jpg"</span> <span class="attribute">data-full</span>=<span class="value">"2_full.jpg"</span>></span>
 <span class="tag">&lt;/<span class="title">div</span>></span></span>
 </code></pre>
+
+<p>
+  When using image CDNs like <a href="/docs/4/cdn/" target="_blank">Uploadcare</a>,
+  you can use a&nbsp;single image source for both larger and smaller versions.
+  To&nbsp;do this, ingest the large image version to Uploadcare and apply the
+  resize Image Transformation to generate its smaller version on the fly. Here’s
+  an&nbsp;example:
+</p>
+
+<p>Large image, source:</p>
+
+<pre><code>https://ucarecdn.com/05f649bf-b70b-4cf8-90f7-2588ce404a08/</code></pre>
+
+<p>Smaller 640px-wide version, generated on the fly:</p>
+
+<pre><code>https://ucarecdn.com/05f649bf-b70b-4cf8-90f7-2588ce404a08/-/resize/640x/</code></pre>
+
+<p>Refer to <a href="https://uploadcare.com/docs/image_transformations/resize_crop/?utm_campaign=fotorama#operation-resize">Uploadcare Docs</a> to learn more.</p>

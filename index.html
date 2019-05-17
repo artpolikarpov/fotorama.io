@@ -1,11 +1,11 @@
 ---
-title: Fotorama
+title: Fotorama — Simple and Powerful Responsive jQuery Image Gallery
 layout: layouts/home.njk
-description: A simple, stunning, powerful jQuery gallery
+description: Fotorama is a modern and natively responsive open source jQuery image gallery plugin. Intuitive controls, great browser compatibility, thumbnails, fullscreen, and serverless images options. Supported by Uploadcare.
 section: 'fotorama'
 ---
 
-<div class="lead">A simple, stunning, powerful jQuery gallery.</div>
+<div class="lead">A simple yet powerful responsive jQuery image gallery.</div>
 
 <script>
     $(function () {
@@ -102,13 +102,16 @@ section: 'fotorama'
 
 
 
-    <pre><code class="lang-xml"><span class='xml'><span class="comment">&lt;!-- 1. Link to jQuery (1.8 or later), --></span>
-<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"</span>></span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>></span> <span class="comment">&lt;!-- 33 KB --></span>
+    <pre><code class="lang-xml"><span class='xml'>
+<span class="comment">&lt;!-- This goes to the &lt;head&gt; of your page --></span>
+<span class="comment">&lt;!-- Add jQuery 1.8 or later to your page, 33 KB --></span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"</span>></span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>></span>
 
-<span class="comment">&lt;!-- fotorama.css &amp; fotorama.js. --></span>
-<span class="tag">&lt;<span class="title">link</span>  <span class="attribute">href</span>=<span class="value">"https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css"</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span>></span> <span class="comment">&lt;!-- 3 KB --></span>
-<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"</span>></span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>></span> <span class="comment">&lt;!-- 16 KB --></span>
+<span class="comment">&lt;!-- Get Fotorama from CDNJS, 19 KB --></span>
+<span class="tag">&lt;<span class="title">link</span>  <span class="attribute">href</span>=<span class="value">"https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css"</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span>></span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"</span>></span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>></span>
 
+<span class="comment">&lt;!-- Then, wherever you want the gallery in your page &lt;body&gt; --></span>
 <span class="comment">&lt;!-- 2. Add images to &lt;div class="fotorama">&lt;/div>. --></span>
 <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>></span>
   <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"https://s.fotorama.io/1.jpg"</span>></span>
@@ -119,9 +122,9 @@ section: 'fotorama'
 </code></pre>
     <p class="after-pre"><em>Example: <a href="/examples/basic/" target="_blank">Basic</a></em></p>
 
-    <p>Just copy-paste the snippet above to start.</p>
+    <p>Just copy and paste the snippet above to integrate Fotorama.</p>
     <p>Fotorama’s <abbr>CDN</abbr> is&nbsp;provided <a href="https://cdnjs.com/libraries/fotorama/" class="js-analytics-click" data-action="outbound">by&nbsp;<abbr>CDNJS</abbr></a> which is&nbsp;powered by&nbsp;24&nbsp;data centers around the&nbsp;world, feel free to&nbsp;use&nbsp;it.</p>
-    <p>Or&nbsp;download zipped, unpack and host it&nbsp;on&nbsp;your server if&nbsp;you want:</p>
+    <p>Or&nbsp;download Fotorama zipped, unpack and host it&nbsp;on&nbsp;your server:</p>
     <p class="indent">
         <a href="https://github.com/artpolikarpov/fotorama/releases/download/4.6.4/fotorama-4.6.4.zip" class="download noise js-analytics-click" data-action="download"><strong><i class="fa fa-cloud-download"></i> fotorama-4.6.4.zip</strong></a></p>
 
@@ -130,4 +133,4 @@ section: 'fotorama'
 
 
 
-    <h2><a href="/docs/4/">Customize</a></h2>
+    <h2><a href="/docs/4/">Configure Fotorama</a></h2>
