@@ -48,7 +48,7 @@
                     </li>
                   {%- for nav in collections.nav -%}
                     <li class="menu__item">
-                      <a href="{{ nav.url | url }}" class="menu__link {% if nav.url == page.url %}is-current{% endif %} {% if nav.data.section == section %}is-section{% endif %}">{{ nnav.data.h1 or nav.data.title }}</a>
+                      <a href="{{ nav.url | url }}" class="menu__link {% if nav.url == page.url %}is-current{% endif %} {% if nav.data.section == section %}is-section{% endif %}">{{ nav.data.h1 or nav.data.title }}</a>
                     </li>
                   {%- endfor -%}
                   </ul>
