@@ -1,9 +1,10 @@
 $(function () {
   function sendEvent (optional) {
-    if (window.ga) {
-      console.log('Analytics event', optional);
-      ga('send', 'event', optional);
-    }
+      if (window.ga) {
+          console.log('Analytics event', optional);
+          ga('send', 'event', optional);
+      }
+  }
 
   $(document)
       // клик по внешним ссылкам
@@ -51,5 +52,4 @@ $(function () {
           }
         });
       });
-}
 });
