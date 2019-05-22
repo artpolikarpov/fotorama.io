@@ -117,11 +117,22 @@ a.menu__link:hover {
     opacity: 1;
 }
 
+.num {
+    font-family: Georgia, serif;
+    font-size: 125%;
+    line-height: .5;
+}
+
+pre + .after-pre {
+    margin-top: -1em;
+}
+
 /**/
 i.uc {
     display: inline-block;
     position: relative;
     vertical-align: middle;
+    top: -.1em;
     width: 1em;
     height: 1em;
     background-image: url(https://ucarecdn.com/6e7a7757-397f-4341-a61f-0223c5a5bd97/-/preview/80x80/-/inline/no/uc-logo-mark-80x80.png);

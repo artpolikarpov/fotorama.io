@@ -15,7 +15,7 @@ section: docs
 <ul>
   {%- for nav in collections.docs4 -%}
     <li>
-      <a href="{{ nav.url | url }}" {% if nav.url == page.url %}data-current="current item"{% endif %}>{{ nav.data.title }}</a>
+      <a href="{{ nav.url | url }}" {% if nav.url == page.url %}data-current="current item"{% endif %}>{{ nav.data.title }}</a> {% if nav.data.uc %}<i class="uc"></i>{% endif %}
     </li>
   {%- endfor -%}
 </ul>
@@ -23,8 +23,8 @@ section: docs
 <h2><a name="dive-deeper" href="#dive-deeper" class="anchor"></a>Dive deeper</h2>
 
 <ul>
-  <li>Download the uncompressed, <a href="https://github.com/artpolikarpov/fotorama/releases/download/4.6.4/fotorama-4.6.4.dev.zip" class="js-analytics-click" data-action="download">development Fotorama 4.6.4</a>.</li>
-  <li>Check out the <a href="https://github.com/artpolikarpov/fotorama" class="js-analytics-click" data-action="outbound">source code</a>.</li>
-  <li>Look through the <a href="https://github.com/artpolikarpov/fotorama/releases" class="js-analytics-click" data-action="outbound">changelog</a>.</li>
-  <li>Build serverless image gallery with <a href="https://uploadcare.com/docs/guides/fotorama/?utm_campaign=fotorama" class="js-analytics-click" data-action="outbound">Uploadcare</a>.</li>
+  <li>Download the uncompressed, <a href="https://github.com/artpolikarpov/fotorama/releases/download/4.6.4/fotorama-4.6.4.dev.zip" target="_blank" class="js-analytics-click" data-action="download">development Fotorama 4.6.4</a>.</li>
+  <li>Check out the <a href="https://github.com/artpolikarpov/fotorama" target="_blank" class="js-analytics-click" data-action="github">source code</a>.</li>
+  <li>Look through the <a href="https://github.com/artpolikarpov/fotorama/releases" target="_blank" class="js-analytics-click" data-action="github">changelog</a>.</li>
+  <li>Build serverless image gallery with <a href="https://uploadcare.com/docs/guides/fotorama/?utm_campaign=fotorama" class="js-analytics-click" target="_blank" data-action="uploadcare">Uploadcare</a>.</li>
 </ul>
