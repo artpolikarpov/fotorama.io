@@ -14,41 +14,39 @@ uc: true
   essential problems: 
 </p>
 
-<p>
-  <ul>
-    <li>Degraded user experience.</li>
-    <li>Lower search engine rankings.</li>
-    <li>Decreased conversion rates.</li>
-  </ul>
-</p>
+<ul>
+  <li>Degraded user experience.</li>
+  <li>Lower search engine rankings.</li>
+  <li>Decreased conversion rates.</li>
+</ul>
 
 <p>
-  All three depend on the&nbsp;page-loading time. As large images increase the
-  metric, you encounter higher bounce rates and a&nbsp;decrease in pageviews per
-  visitor session. Google now treats your site’s performance as a&nbsp;signal to
+  All three depend on the page-loading time. As large images increase the
+  metric, you encounter higher bounce rates and a decrease in pageviews per
+  visitor session. Google now treats your site’s performance as a signal to
   its core algorithm and may lower the position in search results for slower
   pages.
 </p>
 
 <p>
-  You can improve your page-loading times and overcome the&nbsp; previously
-  listed issues by&nbsp;serving your Fotorama images from a&nbsp;content delivery
-  network specializing in&nbsp;images, Image CDN.<br>
-  This approach well combines with cutting&nbsp;off any storage needs and
+  You can improve your page-loading times and overcome the previously
+  listed issues by serving your Fotorama images from a content delivery
+  network specializing in images, Image CDN.<br>
+  This approach well combines with cutting off any storage needs and
   getting your image gallery serverless.
 </p>
 
 <p>
-  CDN is a&nbsp;large and geographically distributed network of&nbsp;nodes
-  capable&nbsp;of caching your assets in&nbsp;many locations simultaneously.
-  When users load your site&nbsp;or app, their browser requests page assets,
-  and CDNs pick the best node&nbsp;to deliver content as fast as possible.
+  CDN is a large and geographically distributed network of nodes
+  capable of caching your assets in many locations simultaneously.
+  When users load your site or app, their browser requests page assets,
+  and CDNs pick the best node to deliver content as fast as possible.
 </p>
 
 <p>
-  Aside from global content delivery, image CDNs are capable&nbsp;of on-the-fly
+  Aside from global content delivery, image CDNs are capable of on-the-fly
   image transformation and optimization to further leverage your web performance.<br>
-  This article is&nbsp;based on using <a href="https://uploadcare.com?utm_campaign=fotorama" target="_blank" class="js-analytics-click" data-action="uploadcare">Uploadcare</a>
+  This article is based on using <a href="https://uploadcare.com?utm_campaign=fotorama" target="_blank" class="js-analytics-click" data-action="uploadcare">Uploadcare</a>
   image CDN. It’s free and folks managed to perform large-scale research on how
   exactly image optimizations affect web performance and compiled an article on
   prioritizing and implementing. Here are the Medium references:
@@ -62,13 +60,13 @@ uc: true
 </p>
 
 <p>
-  Every file uploaded (or&nbsp;ingested) to Uploadcare gets assigned a unique
-  CDN URL that you can further use&nbsp;to request an image or modify it in near
+  Every file uploaded (or ingested) to Uploadcare gets assigned a unique
+  CDN URL that you can further use to request an image or modify it in near
   real time with simple URL directives.<br>
-  Use those CDN URLs as&nbsp;sources for your Fotorama images to ensure serving
-  optimized content to&nbsp;your site’s visitors: improving your behavioral metrics
+  Use those CDN URLs as sources for your Fotorama images to ensure serving
+  optimized content to your site’s visitors: improving your behavioral metrics
   such as pageviews and bounce rates.<br>
-  We crafted an&nbsp;essential example:
+  We crafted an essential example:
 </p>
 
   <pre><code><span class='xml'><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fotorama"</span>
@@ -78,15 +76,15 @@ uc: true
 <span class="tag">&lt;/<span class="title">div</span>></span></span></code></pre>
 
 <p>
-  The basic example covers using raw CDN&nbsp;URLs: serving unmodified images.
-  Then, the next step&nbsp;is about applying the needed Image Transformations; you
-  can find the complete list of possible options in the <a href="https://uploadcare.com/docs/image_transformations/?utm_campaign=fotorama" target="_blank" class="js-analytics-click" data-action="uploadcare">the Uploadcare Docs</a>.
+  The basic example covers using raw CDN URLs: serving unmodified images.
+  Then, the next step is about applying the needed Image Transformations; you
+  can find the complete list of possible options in <a href="https://uploadcare.com/docs/image_transformations/?utm_campaign=fotorama" target="_blank" class="js-analytics-click" data-action="uploadcare">the Uploadcare Docs</a>.
   As already mentioned, you apply the transformations by appending them to the
   original CDN URLs. Some examples for the 3.6 MB original:
 </p>
 
 <p>
-  Automatically serve images in the next-gen WebP format if a user&nbsp;browser
+  Automatically serve images in the next-gen WebP format if a user browser
   supports it (1.6 MB):
 </p>
 
@@ -105,8 +103,8 @@ uc: true
 <pre><code>https://ucarecdn.com/05f649bf-b70b-4cf8-90f7-2588ce404a08/-/resize/680x/-/quality/lightest/-/format/auto/</code></pre>
 
 <p>
-  You can implement optimizations manually&nbsp;or configure your frontend&nbsp;to
-  automatically add the&nbsp;needed postfixes to CDN URLs. You can understand the
+  You can implement optimizations manually or configure your frontend to
+  automatically add the needed postfixes to CDN URLs. You can understand the
   current state of your website’s performance with <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">Google PageSpeed Insights</a>.
   Use the same to track your progress as you implement optimizations.
 </p>
